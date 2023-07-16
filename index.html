@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<!--header-->
+<header>
+  <title>JATA Official Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+</header>
+
+<body>
+  <!--Home page-->
+  <main>
+    <!--background picture of the band-->
+    <div class="landingPage">
+      <!--Populate landing page with stuff!!!-->
+      <div class="container" id="navbarContainer">
+        <div class="navbar" id="navbarId">
+          <!--Buttons and hover effect-->
+
+          <!--Shop-->
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><img
+              src="assets\landingPage\BUTTONS\DEFAULT\SHOP__BUTTON.png" id="shopBtn" onmouseover="newShopBtn()"
+              onmouseout="oldShopBtn()"></a>
+
+          <!--Listen-->
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><img
+              src="assets\landingPage\BUTTONS\DEFAULT\LISTEN_BUTTON.png" id="listenBtn" onmouseover="newListenBtn()"
+              onmouseout="oldListenBtn()"></a>
+
+          <!--Watch-->
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><img
+              src="assets\landingPage\BUTTONS\DEFAULT\WATCH_BUTTON.png" id="watchBtn" onmouseover="newWatchBtn()"
+              onmouseout="oldWatchBtn()"></a>
+
+          <!--Shows-->
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><img
+              src="assets\landingPage\BUTTONS\DEFAULT\SHOWS_BUTTON.png" id="showsBtn" onmouseover="newShowsBtn()"
+              onmouseout="oldShowsBtn()"></a>
+        </div>
+      </div>
+
+
+      <!--JATA Logo-->
+      <div class="container" id="logoContainer">
+        <div class="logoImg">
+          <img src="assets\landingPage\LOGO\JATA WHITE LOGO.png">
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="container" id="footerContainer">
+        <nav class="footer">
+          <a href="https://www.facebook.com/Joeandtheanchor" target="_blank" rel="noopener noreferrer">
+            <img src="assets\landingPage\ICONS\FACEBOOK ICON.png" id="facebookBtn"></a>
+
+          <a href="https://www.instagram.com/joeandtheanchor/" target="_blank" rel="noopener noreferrer">
+            <img src="assets\landingPage\ICONS\INSTAGRAM ICON.png" id="instagramBtn"></a>
+
+          <a href="https://open.spotify.com/artist/6FpBJFzBtiKyHIxhZdvoZx" target="_blank" rel="noopener noreferrer">
+            <img src="assets\landingPage\ICONS\SPOTIFY ICON.png" id="spotifyBtn"></a>
+
+          <a href="https://www.youtube.com/@JoeTheAnchor" target="_blank" rel="noopener noreferrer">
+            <img src="assets\landingPage\ICONS\YOUTUBE ICON.png" id="youtubeBtn"></a>
+        </nav>
+      </div>
+
+      <!--Login button-->
+      <div class="loginContainer" onclick="overlayLoginPromptOn()">
+        <img src="assets\landingPage\BUTTONS\DEFAULT\LOGIN_BUTTON.png" id="loginBtn" onmouseover="newLoginBtn()"
+          onmouseout="oldLoginBtn()">
+      </div>
+    </div> 
+  </main>
+
+  <!--Overlay password prompt-->
+  <div id="overlay">
+    <div id="passwordLabel">
+      <h3>ENTER PASSWORD</h3>
+    </div> 
+    
+    <div class="passwordInputField">
+      <input type="password" id="ip2">
+    </div>
+
+    <div id="closeBtnContainer">
+      <div id="closeBtn" onclick="overlayLoginPromptOff()">
+        <img src="assets\landingPage\BUTTONS\HOOVER_KLICK\CLOSE_BUTTON_HOOVER.png" id="closeBtn" onmouseover="newCloseBtn()"
+        onmouseout="oldCloseBtn()">
+      </div>
+    </div>
+  </div>
+
+  <!--Tour dates section-->
+  <section class="tourDates">
+    <div class="showsContainer">
+      <h1>SHOWS</h1>
+    </div>
+    
+    <div class="border"></div>
+
+    <div class="tourDateContainer">
+      <div class="dateAndPlace">
+        <div class="date">
+          <h1>AUG 1 - 2023</h1> <!--Fixa text format-->
+        </div>
+        <div clas="venue">
+          <p>The Bellwether</p>
+        </div>
+        <div class="ticketStatus">
+          <p>Sold Out</p>
+        </div>
+      </div>
+      <div class="country">
+        <p>Los Angeles, CA</p>
+      </div>
+      <div class="tour">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"
+          rel="noopener noreferrer">
+          <img src="assets\landingPage\BUTTONS\DEFAULT\TOUR_BUTTON.png" id="tourBtn"></a>
+      </div>
+    </div>
+
+    <div class="tourDateContainer">
+      <div class="dateAndPlace">
+        <div class="date">
+          <h1>AUG 2 - 2023</h1> <!--Fixa text format-->
+        </div>
+        <div clas="venue">
+          <p>The Bellwether</p>
+        </div>
+        <div class="ticketStatus">
+          <p>Sold Out</p>
+        </div>
+      </div>
+      <div class="country">
+        <p>Los Angeles, CA</p>
+      </div>
+      <div class="tour">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"
+          rel="noopener noreferrer">
+          <img src="assets\landingPage\BUTTONS\DEFAULT\TOUR_BUTTON.png" id="tourBtn"></a>
+      </div>
+    </div>
+
+    <div class="tourDateContainer">
+      <div class="dateAndPlace">
+        <div class="date">
+          <h1>AUG 3 - 2023</h1> <!--Fixa text format-->
+        </div>
+        <div clas="venue">
+          <p>The Bellwether</p>
+        </div>
+        <div class="ticketStatus">
+          <p>Sold Out</p>
+        </div>
+      </div>
+      <div class="country">
+        <p>Los Angeles, CA</p>
+      </div>
+      <div class="tour">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"
+          rel="noopener noreferrer">
+          <img src="assets\landingPage\BUTTONS\DEFAULT\TOUR_BUTTON.png" id="tourBtn"></a>
+      </div>
+    </div>
+
+    <div class="tourDateContainer">
+      <div class="dateAndPlace">
+        <div class="date">
+          <h1>AUG 4 - 2023</h1> <!--Fixa text format-->
+        </div>
+        <div clas="venue">
+          <p>The Bellwether</p>
+        </div>
+        <div class="ticketStatus">
+          <p>Sold Out</p>
+        </div>
+      </div>
+      <div class="country">
+        <p>Los Angeles, CA</p>
+      </div>
+      <div class="tour">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"
+          rel="noopener noreferrer">
+          <img src="assets\landingPage\BUTTONS\DEFAULT\TOUR_BUTTON.png" id="tourBtn"></a>
+      </div>
+    </div>
+    
+    <div class="tourDateContainer">
+      <div class="dateAndPlace">
+        <div class="date">
+          <h1>AUG 5 - 2023</h1> <!--Fixa text format-->
+        </div>
+        <div clas="venue">
+          <p>The Bellwether</p>
+        </div>
+        <div class="ticketStatus">
+          <p>Sold Out</p>
+        </div>
+      </div>
+      <div class="country">
+        <p>Los Angeles, CA</p>
+      </div>
+      <div class="tour">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"
+          rel="noopener noreferrer">
+          <img src="assets\landingPage\BUTTONS\DEFAULT\TOUR_BUTTON.png" id="tourBtn"></a>
+      </div>
+    </div>
+    
+    <div class="tourDateContainer">
+      <div class="dateAndPlace">
+        <div class="date">
+          <h1>AUG 6 - 2023</h1> <!--Fixa text format-->
+        </div>
+        <div clas="venue">
+          <p>The Bellwether</p>
+        </div>
+        <div class="ticketStatus">
+          <p>Sold Out</p>
+        </div>
+      </div>
+      <div class="country">
+        <p>Los Angeles, CA</p>
+      </div>
+      <div class="tour">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"
+          rel="noopener noreferrer">
+          <img src="assets\landingPage\BUTTONS\DEFAULT\TOUR_BUTTON.png" id="tourBtn"></a>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
