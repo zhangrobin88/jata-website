@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<!--header-->
+<header>
+    <title>JATA Hiddenpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</header>
+
+<body>
+    <main>
+        <div id="hiddenPage">
+            <div id="welcomeHeader">
+                <h1>WELCOME</h1>
+            </div>
+
+            <div id="textHeader">
+                <p>In here you'll find JATA's presskit, stageplot, techrider <br>
+                    and link to their upcoming new album.</p>
+            </div>
+
+            <div id="presskitNav">
+
+
+                <a href="presskit.html"><img src="assets\landingPage\BUTTONS\DEFAULT\PRESSKIT__BUTTON.png"
+                        class="hiddenPageBtns" id="presskitBtn"
+                        onmouseover="newBtn('presskitBtn', 'assets/landingPage/BUTTONS/HOOVER_KLICK/PRESSKIT__BUTTON_HOOVER.png')"
+                        onmouseout="oldBtn('presskitBtn', 'assets/landingPage/BUTTONS/DEFAULT/PRESSKIT__BUTTON.png')"></a>
+
+                <a href="stagePlot.html"><img src="assets\landingPage\BUTTONS\DEFAULT\STAGEPLOT_BUTTON.png"
+                        class="hiddenPageBtns" id="stageplotBtn"
+                        onmouseover="newBtn('stageplotBtn', 'assets/landingPage/BUTTONS/HOOVER_KLICK/STAGEPLOT_BUTTON_HOOVER.png')"
+                        onmouseout="oldBtn('stageplotBtn', 'assets/landingPage/BUTTONS/DEFAULT/STAGEPLOT_BUTTON.png')"></a>
+                
+                <a href="" target="_blank"><img src="assets\landingPage\BUTTONS\DEFAULT\NEW_ALBUM_BUTTON.png"
+                        class="hiddenPageBtns" id="newAlbumBtn"
+                        onmouseover="newBtn('newAlbumBtn', 'assets/landingPage/BUTTONS/HOOVER_KLICK/NEW_ALBUM_BUTTON_HOOVER.png')"
+                        onmouseout="oldBtn('newAlbumBtn', 'assets/landingPage/BUTTONS/DEFAULT/NEW_ALBUM_BUTTON.png')"></a>
+            </div>
+
+            <div id="hiddenPageFooter">
+                <div id="closeHiddenPage">
+                    <a href="index.html"><img src="assets\landingPage\BUTTONS\DEFAULT\CLOSE_BUTTON.png"
+                            class="hiddenPageBtns" id="closeHiddenPageBtn"
+                            onmouseover="newBtn('closeHiddenPageBtn', 'assets/landingPage/BUTTONS/HOOVER_KLICK/CLOSE_BUTTON_HOOVER.png')"
+                            onmouseout="oldBtn('closeHiddenPageBtn', 'assets/landingPage/BUTTONS/DEFAULT/CLOSE_BUTTON.png')"></a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
