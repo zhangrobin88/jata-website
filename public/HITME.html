@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JATA on Spotify</title>
+
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '527334526412233');
+        fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=527334526412233&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: url("assets/landingPage/IMAGES/JATA_CROWD.png") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for better text visibility */
+            padding: 20px;
+            border-radius: 12px;
+            display: inline-block;
+            margin: 20px auto;
+        }
+        h1 {
+            color: #fff;
+        }
+        p {
+            color: #ddd;
+        }
+        .spotify-cover {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .spotify-cover img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        button {
+            background-color: #1DB954;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #1ed760;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Listen to 'Hit Me" on Spotify!</h1>
+        <div class="spotify-cover" id="hitme-cover">
+            <a href="https://open.spotify.com/track/5K2YxgbzqJfd8wFTmRpLLk?si=b0d69869b89742b1" target="_blank">
+                <img src="assets/coa-cover-art/Hit Me 3000x3000 F4.jpg" alt="Nothing Without You Cover Art">
+            </a>
+        </div>
+        <a href="https://open.spotify.com/track/5K2YxgbzqJfd8wFTmRpLLk?si=b0d69869b89742b1" id="spotify-link" target="_blank">
+            <button id="listenonspotifysingle">Listen on Spotify</button>
+        </a>
+    </div>
+
+    <!-- Facebook Pixel Event Tracking for Listen on Spotify btn -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('listenonspotifysingle').addEventListener('click', function() {
+            fbq('track', 'clicked-on-listen-btn');
+            //console.log("Clicked Listen on Spotify button!");
+            });
+        });
+
+         document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('hitme-cover').addEventListener('click', function() {
+            fbq('track', 'clicked-on-cover');
+            //console.log("Clicked on cover!");
+            });
+        });
+        </script>
+    
+</body>
+</html>

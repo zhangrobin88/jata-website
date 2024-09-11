@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JATA on Spotify</title>
 
-    <!-- Meta Pixel Code -->
-    <script>
+<!-- Meta Pixel Code -->
+<script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -15,15 +15,13 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '527334526412233');
+    fbq('init', '8694518620598613');
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=527334526412233&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=8694518620598613&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-
-
 
     <style>
         body {
@@ -48,9 +46,13 @@
         p {
             color: #ddd;
         }
-        .spotify-embed {
+        .spotify-cover {
             margin: 20px auto;
             max-width: 600px;
+        }
+        .spotify-cover img {
+            width: 100%;
+            border-radius: 12px;
         }
         button {
             background-color: #1DB954;
@@ -69,14 +71,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Check Out Our Latest Single 'Hit Me' on Spotify!</h1>
-        <div class="spotify-embed" id="spotify-container">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5K2YxgbzqJfd8wFTmRpLLk?utm_source=generator" 
-            width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
-            clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
+        <h1>Listen to 'Nothing Without You" on Spotify!</h1>
+        <div class="spotify-cover" id="nwy-cover">
+            <a href="https://open.spotify.com/track/3ui6aO5mRdx2Z62aONCns9?si=2ed2b7d5757f41e8" target="_blank">
+                <img src="assets/coa-cover-art/Nothing Without You 3000x3000_Final Artwork.jpg" alt="Nothing Without You Cover Art">
+            </a>
         </div>
-        <a href="https://open.spotify.com/track/5K2YxgbzqJfd8wFTmRpLLk?si=03faaee41bbf4ce4" id="spotify-link" target="_blank">
+        <a href="https://open.spotify.com/track/3ui6aO5mRdx2Z62aONCns9?si=2ed2b7d5757f41e8" id="spotify-link" target="_blank">
             <button id="listenonspotifysingle">Listen on Spotify</button>
         </a>
     </div>
@@ -85,8 +86,15 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('listenonspotifysingle').addEventListener('click', function() {
-        fbq('track', 'hitMeLandingPage');
-        console.log("Clicked Listen on Spotify button!");
+        fbq('track', 'clicked-on-listen-btn');
+        //console.log("Clicked Listen on Spotify button!");
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('nwy-cover').addEventListener('click', function() {
+        fbq('track', 'clicked-on-cover-art');
+        //console.log("Clicked on cover!");
         });
     });
     </script>
