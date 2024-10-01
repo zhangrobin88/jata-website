@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JATA on Spotify</title>
+    <title>JATA - Coming Of Age</title>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -54,31 +54,64 @@
             width: 100%;
             border-radius: 12px;
         }
-        button {
-            background-color: #1DB954;
-            color: white;
-            border: none;
+        /* Music buttons outside the container */
+        .music-buttons {
+            display: flex;
+            justify-content: center; /* Center the buttons */
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .music-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 10px 20px;
             border-radius: 25px;
-            cursor: pointer;
+            text-decoration: none;
             font-size: 16px;
+            font-weight: bold;
+            color: white;
             transition: background-color 0.3s;
         }
-        button:hover {
+        .spotify-button {
+            background-color: #1DB954;
+        }
+        .spotify-button:hover {
             background-color: #1ed760;
+        }
+        .apple-button {
+            background-color: #4e4a4a;
+        }
+        .apple-button:hover {
+            background-color: #333;
+        }
+        .music-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Listen to 'Coming Of Age" on Spotify!</h1>
+        <h1>Listen to 'Coming Of Age'</h1>
         <div class="spotify-cover" id="coa-cover">
-            <a href="www.joeandtheanchor.com" target="_blank">
+            <a href="https://open.spotify.com/album/1ZblyQUei9JJq2CLFwGsvN?si=Jg13lpoqR2engHb-GhRD-Q" target="_blank">
                 <img src="assets/coa-cover-art/Coming Of Age 3000x3000 F2.jpg" alt="Nothing Without You Cover Art">
             </a>
         </div>
-        <a href="www.joeandtheacnhor.com" id="spotify-link" target="_blank">
-            <button id="listenonspotifysingle">Listen on Spotify</button>
+    </div>
+    <div class="music-buttons">
+        <!-- Spotify Button -->
+        <a href="https://open.spotify.com/album/1ZblyQUei9JJq2CLFwGsvN?si=Jg13lpoqR2engHb-GhRD-Q" class="music-button spotify-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo">
+            Spotify
+        </a>
+
+        <!-- Apple Music Button -->
+        <a href="https://music.apple.com/us/album/coming-of-age/1749296638" class="music-button apple-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music Logo">
+            Apple Music
         </a>
     </div>
 

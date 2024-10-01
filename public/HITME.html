@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JATA on Spotify</title>
-
+    <title>JATA on Spotify & Apple Music</title>
 
     <!-- Meta Pixel Code -->
-    <script>
+       <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -22,7 +21,7 @@
         <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=527334526412233&ev=PageView&noscript=1"
         /></noscript>
-        <!-- End Meta Pixel Code -->
+    <!-- End Meta Pixel Code -->
 
     <style>
         body {
@@ -55,50 +54,66 @@
             width: 100%;
             border-radius: 12px;
         }
-        button {
-            background-color: #1DB954;
-            color: white;
-            border: none;
+        
+        /* Music buttons outside the container */
+        .music-buttons {
+            display: flex;
+            justify-content: center; /* Center the buttons */
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .music-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 10px 20px;
             border-radius: 25px;
-            cursor: pointer;
+            text-decoration: none;
             font-size: 16px;
+            font-weight: bold;
+            color: white;
             transition: background-color 0.3s;
         }
-        button:hover {
+        .spotify-button {
+            background-color: #1DB954;
+        }
+        .spotify-button:hover {
             background-color: #1ed760;
+        }
+        .apple-button {
+            background-color: #4e4a4a;
+        }
+        .apple-button:hover {
+            background-color: #333;
+        }
+        .music-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Listen to 'Hit Me" on Spotify!</h1>
-        <div class="spotify-cover" id="hitme-cover">
-            <a href="https://open.spotify.com/track/5K2YxgbzqJfd8wFTmRpLLk?si=b0d69869b89742b1" target="_blank">
-                <img src="assets/coa-cover-art/Hit Me 3000x3000 F4.jpg" alt="Nothing Without You Cover Art">
+        <h1>Listen to 'Hit Me'</h1>
+        <div class="spotify-cover" id="wmym-cover">
+            <a href="https://open.spotify.com/track/5K2YxgbzqJfd8wFTmRpLLk?si=43d95aad3f834694" target="_blank">
+                <img src="assets/coa-cover-art/Hit Me 3000x3000 F4.jpg" alt="Coming of Age Cover">
             </a>
         </div>
-        <a href="https://open.spotify.com/track/5K2YxgbzqJfd8wFTmRpLLk?si=b0d69869b89742b1" id="spotify-link" target="_blank">
-            <button id="listenonspotifysingle">Listen on Spotify</button>
-        </a>
+        <div class="music-buttons">
+            <!-- Spotify Button -->
+            <a href="https://open.spotify.com/track/5K2YxgbzqJfd8wFTmRpLLk?si=43d95aad3f834694" class="music-button spotify-button" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo">
+                Spotify
+            </a>
+
+            <!-- Apple Music Button -->
+            <a href="https://music.apple.com/ph/album/hit-me-nothing-left-to-break/1749294499?i=1749294500" class="music-button apple-button" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music Logo">
+                Apple Music
+            </a>
+        </div>
     </div>
-
-    <!-- Facebook Pixel Event Tracking for Listen on Spotify btn -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('listenonspotifysingle').addEventListener('click', function() {
-            fbq('track', 'clicked-on-listen-btn');
-            //console.log("Clicked Listen on Spotify button!");
-            });
-        });
-
-         document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('hitme-cover').addEventListener('click', function() {
-            fbq('track', 'clicked-on-cover');
-            //console.log("Clicked on cover!");
-            });
-        });
-        </script>
-    
 </body>
 </html>

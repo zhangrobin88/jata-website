@@ -3,25 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JATA on Spotify</title>
+    <title>JATA on Spotify & Apple Music</title>
 
-<!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '499975206293073');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=499975206293073&ev=PageView&noscript=1"
-    /></noscript>
-
+    <!-- Meta Pixel Code -->
+   
     <!-- End Meta Pixel Code -->
 
     <style>
@@ -55,50 +40,66 @@
             width: 100%;
             border-radius: 12px;
         }
-        button {
-            background-color: #1DB954;
-            color: white;
-            border: none;
+        
+        /* Music buttons outside the container */
+        .music-buttons {
+            display: flex;
+            justify-content: center; /* Center the buttons */
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .music-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 10px 20px;
             border-radius: 25px;
-            cursor: pointer;
+            text-decoration: none;
             font-size: 16px;
+            font-weight: bold;
+            color: white;
             transition: background-color 0.3s;
         }
-        button:hover {
+        .spotify-button {
+            background-color: #1DB954;
+        }
+        .spotify-button:hover {
             background-color: #1ed760;
+        }
+        .apple-button {
+            background-color: #4e4a4a;
+        }
+        .apple-button:hover {
+            background-color: #333;
+        }
+        .music-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Listen to 'Do you Wanna Give It A Shot' on Spotify!</h1>
-        <div class="spotify-cover" id="gias-cover">
-            <a href="https://open.spotify.com/album/5OAu7PDEuCYt8nbPaEvH90?si=aoYs5E_bRxaIIpXM9DinWw" target="_blank">
-                <img src="assets/coa-cover-art/Do You Wanna Give It A Shot_3000x3000_Final Artwork.jpg" alt="Nothing Without You Cover Art">
+        <h1>Listen to 'Do You Wanna Give It A Shot'</h1>
+        <div class="spotify-cover" id="wmym-cover">
+            <a href="https://open.spotify.com/track/3aSWR63FEvltl1EEOLE63D?si=cfdc8b81948f435f" target="_blank">
+                <img src="assets/coa-cover-art/Do You Wanna Give It A Shot_3000x3000_Final Artwork.jpg" alt="Coming of Age Cover">
             </a>
         </div>
-        <a href="https://open.spotify.com/album/5OAu7PDEuCYt8nbPaEvH90?si=aoYs5E_bRxaIIpXM9DinWw" id="spotify-link" target="_blank">
-            <button id="listenonspotifysingle">Listen on Spotify</button>
-        </a>
+        <div class="music-buttons">
+            <!-- Spotify Button -->
+            <a href="https://open.spotify.com/track/3aSWR63FEvltl1EEOLE63D?si=cfdc8b81948f435f" class="music-button spotify-button" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo">
+                Spotify
+            </a>
+
+            <!-- Apple Music Button -->
+            <a href="https://music.apple.com/id/album/do-you-wanna-give-it-a-shot/1749293372?i=1749293373" class="music-button apple-button" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music Logo">
+                Apple Music
+            </a>
+        </div>
     </div>
-
-    <!-- Facebook Pixel Event Tracking for Listen on Spotify btn -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('listenonspotifysingle').addEventListener('click', function() {
-        fbq('track', 'clicked-on-listen-btn');
-        //console.log("Clicked Listen on Spotify button!");
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('gias-cover').addEventListener('click', function() {
-        fbq('track', 'clicked-on-cover');
-        //console.log("Clicked on cover!");
-        });
-    });
-    </script>
-    
 </body>
 </html>

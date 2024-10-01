@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JATA on Spotify & Apple Music</title>
 
-<!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '8694518620598613');
-    fbq('track', 'PageView');
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '527334526412233');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=8694518620598613&ev=PageView&noscript=1"
+        src="https://www.facebook.com/tr?id=527334526412233&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
 
@@ -54,8 +54,9 @@
             width: 100%;
             border-radius: 12px;
         }
-         /* Music buttons outside the container */
-         .music-buttons {
+        
+        /* Music buttons outside the container */
+        .music-buttons {
             display: flex;
             justify-content: center; /* Center the buttons */
             gap: 15px;
@@ -94,42 +95,25 @@
 </head>
 <body>
     <div class="container">
-        <h1>Listen to 'Nothing Without You'</h1>
-        <div class="spotify-cover" id="nwy-cover">
-            <a href="https://open.spotify.com/track/3ui6aO5mRdx2Z62aONCns9?si=c92849ccf92544b6" target="_blank">
-                <img src="assets/coa-cover-art/Nothing Without You 3000x3000_Final Artwork.jpg" alt="Nothing Without You Cover Art">
+        <h1>Listen to 'What Made You Mine'</h1>
+        <div class="spotify-cover" id="wmym-cover">
+            <a href="https://open.spotify.com/track/2Ri3mZYStRYvRlxALwXlLQ?si=77625944fc994f14" target="_blank">
+                <img src="assets/coa-cover-art/Coming Of Age 3000x3000 F2.jpg" alt="Coming of Age Cover">
             </a>
         </div>
         <div class="music-buttons">
             <!-- Spotify Button -->
-            <a href="https://open.spotify.com/track/3ui6aO5mRdx2Z62aONCns9?si=c92849ccf92544b6" class="music-button spotify-button" target="_blank">
+            <a href="https://open.spotify.com/track/2Ri3mZYStRYvRlxALwXlLQ?si=77625944fc994f14" class="music-button spotify-button" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify Logo">
                 Spotify
             </a>
 
             <!-- Apple Music Button -->
-            <a href="https://music.apple.com/us/album/nothing-without-you/1749293688?i=1749293931" class="music-button apple-button" target="_blank">
+            <a href="https://music.apple.com/us/album/what-made-you-mine/1749296638?i=1749296655" class="music-button apple-button" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music Logo">
                 Apple Music
             </a>
         </div>
-
-    <!-- Facebook Pixel Event Tracking for Listen on Spotify btn -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('listenonspotifysingle').addEventListener('click', function() {
-        fbq('track', 'clicked-on-listen-btn');
-        //console.log("Clicked Listen on Spotify button!");
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('nwy-cover').addEventListener('click', function() {
-        fbq('track', 'clicked-on-cover-art');
-        //console.log("Clicked on cover!");
-        });
-    });
-    </script>
-    
+    </div>
 </body>
 </html>
